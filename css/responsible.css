@@ -1,0 +1,505 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ======= END OF RESET ======= */
+
+/* ======= LAYOUT ======= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+main, header, footer {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* ======= TYPOGRAPHY & COLOUR ======= */
+body {
+	font-family: "Lora", Verdana;
+	font-size: 1.0em;
+	color: #1a1a1a;
+}
+
+/* ======= RESPONSIVE STYLING ======= */
+
+
+/* ======= RESPONSIVE STYLING FOR HEADER ======= */
+
+@media (min-width: 800px) {
+	header {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		height:80px;	
+		grid-column-gap: 1.5em; /* same as margin-top on figure */
+	}
+	header ul li {
+		float: left;
+ margin: 10px 10px 20px 20px;
+
+	}
+	
+}
+@media (min-width: 1300px) {
+	header {
+		grid-template-columns: 1fr, 3fr;
+		height:80px;
+	}
+	
+	header ul li {
+		float: left;
+ margin: 10px 30px 20px 20px;
+
+	}
+}
+@media (min-width: 1800px) {
+	header {
+		grid-template-columns: 1fr, 4fr;
+		height:80px;
+	}
+	header ul li {
+		float: left;
+ margin: 10px 30px 20px 20px;
+
+	}
+}
+/* ======= GALLERY STYLING ======= */
+h1 {
+	font-family: "Berkshire Swash", Georgia, Times, cursive;
+	font-size: 3.4em;
+	color: #000000;
+	width: 50%;
+	padding-bottom: 0.1em;
+	border-bottom: 5px solid #A00406;
+	margin: 0.6em auto 0.8em;
+	text-align:center;
+}h2 {
+	font-family: "Berkshire Swash", Georgia, Times, cursive;
+	font-size: 3.4em;
+	color: #000000;
+	width: 50%;
+	padding-bottom: 0.1em;
+	border-bottom: 5px solid #A00406;
+	margin: 0.6em auto 0.8em;
+	text-align:center;
+}h6 {
+	font-family: "Berkshire Swash", Georgia, Times, cursive;
+	color: #000000;
+	text-align:center;
+}
+
+figure {
+	background-color:#A00406;
+	padding: 3% 3% 1.5%;
+	margin-top: 1.5em;
+	box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.4);
+	border-radius: 20px 20px 0 0;
+}
+figure img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #bbb;
+	border-radius: 10px 10px 0 0 ;
+}
+figcaption {color: white;
+	min-height: 3.6em;
+	line-height: 1.45;
+	padding-top: 0.5em;
+	text-align: center;
+}
+
+/* ======= RESPONSIVE STYLING ======= */
+
+
+@media (min-width: 800px) {
+	main {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 1.5em; /* same as margin-top on figure */
+	}
+	
+}
+@media (min-width: 1300px) {
+	main {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+}
+@media (min-width: 1800px) {
+	main{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+}
+
+@media (min-width: 800px) {
+section{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 1.5em;
+	max-width: 100em;
+	padding: 50px;/* same as margin-top on figure */
+	}
+	section img{
+	width: 500px;
+	height: 600px;
+}
+}
+@media (min-width: 1300px) {
+	section{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 100em;
+		padding: 50px;
+	}
+	section img{
+	width: 500px;
+	height: 600px;
+}
+}
+@media (min-width: 1800px) {
+	 section{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		 max-width: 100em;
+		 padding: 50px;
+	}
+	section img{
+	width: 500px;
+	height: 600px;
+}
+}@media (max-width: 800px) {
+	section img{
+	display: none;
+}
+}
+
+@media (min-width: 800px) {
+	section:nth-last-child(4){
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		max-width: 100em;
+		padding: 50px;
+	}
+	section div:nth-child(1){
+		border: 2px dashed #A00406;
+		height: 180px;
+		width: 250px;
+		text-align: center;
+		padding: 50px;
+		
+	}
+	section div:nth-child(1):hover{
+		border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+section div:nth-child(2){
+		border: 2px dashed #A00406;
+		height: 200px;
+		width:  240px;
+	text-align: center;
+	padding: 50px;
+		
+	}
+	section div:nth-child(2):hover{
+		border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	section div:nth-child(3){
+		border: 2px dashed #A00406;
+		height: 240px;
+		width:  240px;
+		text-align: center;
+		padding: 50px;
+		
+	}
+	
+	section div:nth-child(3):hover{
+border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	section div:nth-child(4){
+		border: 2px dashed #A00406;
+		height: 220px;
+		width:  240px;
+		text-align: center;
+		padding: 50px;
+		
+	}
+section div:nth-child(4):hover{
+		border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	
+}
+@media (min-width: 1300px) {
+	section:nth-last-child(4){
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 100em;
+		padding: 50px;
+	}
+	section div:nth-child(1){
+		border: 2px dashed #A00406;
+		height: 180px;
+		width: 250px;
+		text-align: center;
+		padding: 50px;
+		
+	} 
+	
+	section div:nth-child(1):hover{
+		border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+		
+	}
+	
+	section div:nth-child(2){
+		border: 2px dashed #A00406;
+		height: 200px;
+		width:  240px;
+		text-align: center;
+		padding: 50px;
+	}
+	
+	section div:nth-child(2):hover{
+		border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	
+	section div:nth-child(3){
+		border: 2px dashed #A00406;
+		height: 240px;
+		width:  240px;
+		text-align: center;
+		padding: 50px;
+		
+	}
+	
+	section div:nth-child(3):hover{
+	border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	
+	
+	
+	section div:nth-child(4){
+		border: 2px dashed #A00406;
+		height: 200px;
+		width:  240px;
+		text-align: center;
+		padding: 50px;
+	}
+
+	section div:nth-child(4):hover{
+	border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	
+}
+@media (min-width: 1800px) {
+	section:nth-last-child(4){
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 100em;
+		padding: 50px;
+	}
+	section div:nth-child(1){
+		border: 2px dashed #A00406;
+		height: 180px;
+		width: 250px;
+	text-align: center;
+	padding: 50px;
+	}
+	
+	section div:nth-child(1):hover{
+		border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	
+section div:nth-child(2){
+		border: 2px dashed #A00406;
+		height: 200px;
+		width:  240px;
+	text-align: center;
+	padding: 50px;
+		
+	}
+	
+	section div:nth-child(2):hover{
+	border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	
+	section div:nth-child(3){
+		border: 2px dashed #A00406;
+		height: 240px;
+		width:  240px;
+		text-align: center;
+		padding: 50px;
+		
+	}
+	section div:nth-child(3):hover{
+		border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	
+	section div:nth-child(4){
+		border: 2px dashed #A00406;
+		height: 200px;
+		width: 240px;
+		text-align: center;
+		padding: 50px;
+	}
+
+	section div:nth-child(4):hover{
+		border: 2px dashed #000000;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		background: #000000;
+		border-radius: 50px 0 50px 0px;
+		
+	}
+	
+}
+
+@media (min-width: 800px) {
+ location {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 100em;
+	margin-right: auto;
+	margin-left: auto;
+	 width:90%;
+		height:auto;
+	color: white;
+	
+	}}
+@media (min-width: 1300px) {
+location {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 100em;
+	margin-right: auto;
+	margin-left: auto;
+	 width:90%;
+		height:auto;
+	color: white;
+	
+	}}
+@media (min-width: 1800px) {
+location contact{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 100em;
+	margin-right: auto;
+	margin-left: auto;
+		 width:90%;
+		height:auto;
+	color: white;
+	
+	
+	}}
+/* ======= RESPONSIVE STYLING FOR HEADER ======= */
